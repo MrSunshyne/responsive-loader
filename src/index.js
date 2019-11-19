@@ -92,7 +92,8 @@ module.exports = function loader(content: Buffer) {
     }
   }
 
-  const name = (config.name || '[hash]-[width].[ext]').replace(/\[ext\]/ig, ext);
+  const currentFileName = path.basename(this.resourcePath, path.extname(this.resourcePath));
+  var name = (config.name || '[hash]-[width].[ext]').replace(/\[ext\]/ig, ext).replace(/\[name\]/ig, currentFileName);
 
   const adapter: Function = config.adapter || require('./adapters/jimp');
   const loaderContext: any = this;

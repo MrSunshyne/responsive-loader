@@ -113,7 +113,7 @@ ReactDOM.render(
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `name` | `string` | `[hash]-[width].[ext]` | Filename template for output files. |
+| `name` | `string` | `[hash]-[width].[ext]` | Filename template for output files. Configure name between `hash` or `name`|
 | `outputPath` | `string | Function` | `undefined` | Configure a custom output path for your file |
 | `publicPath` | `string | Function` | `undefined` | Configure a custom public path for your file. |
 | `context` | `string` | `this.options.context` | Custom file context, defaults to webpack.config.js [context](https://webpack.js.org/configuration/entry-context/#context) |
